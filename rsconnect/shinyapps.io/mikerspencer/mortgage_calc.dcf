@@ -1,0 +1,12 @@
+name: mortgage_calc
+title: mortgage_calc
+username:
+account: mikerspencer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2437766
+bundleId: 3253367
+url: https://mikerspencer.shinyapps.io/mortgage_calc/
+when: 1591816683.94054
+asMultiple: FALSE
+asStatic: FALSE

@@ -73,12 +73,29 @@ shinyUI(fluidPage(
             )),
 
 
-        # Show a plot of the costs
+
         mainPanel(
             fluidRow(
+
+                # Show a plot of the costs
+                h3("Plot of interest cost over the fixed term period"),
                 plotOutput("costPlot"),
+
+                # Show table of the costs
+                h3("Table of interest cost over the fixed term period"),
+                formattableOutput("formattable"),
+
+                # Description
                 h3("About"),
-                p("test")
+                p("This is an app to calculate and compare the cost of four mortgages. These mortgages need to be fixed rate and the fixed rate needs to be over the same term. Use the app to see whether paying a fee for a lower interest rate will save you money."),
+                p("This app is issued with no warranty (see licence on GitHub). Please consult a specialist financial advisor."),
+                hr(),
+                p(a("Created by Mike Spencer",
+                  href = "https://twitter.com/MikeRSpencer",
+                  target = "_blank")),
+                p(a("Code available on GitHub",
+                  href = "https://github.com/mikerspencer/mortgage_calc",
+                  target = "_blank"))
         ))
     )
 ))

@@ -1,4 +1,5 @@
 library(tidyverse)
+library(formattable)
 
 total_cost = function(borrow, fees, period, interest_rate, repayment_pcm){
   df = tibble(year = 0:period,

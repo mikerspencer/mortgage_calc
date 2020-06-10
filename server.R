@@ -36,12 +36,13 @@ shinyServer(function(input, output) {
                                    input$period,
                                    input$interest_rate_4,
                                    input$repayment_pcm_4))) %>%
-            ggplot(aes(mort, cost)) +
-            geom_col() +
-            labs(x = "",
-                 y = "Cost (£)") +
-            theme_bw() +
-            theme(text = element_text(size = 20))
+        ggplot(aes(mort, cost)) +
+        geom_col() +
+        scale_y_continuous(labels = scales::dollar_format(prefix = "£")) +
+        labs(x = "",
+             y = "Cost") +
+        theme_bw() +
+        theme(text = element_text(size = 20))
 
     })
 
